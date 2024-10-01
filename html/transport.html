@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modernize Free</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.1.7/css/dataTables.dataTables.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+  <script src="https://cdn.datatables.net/2.1.7/js/dataTables.js"></script>
+  <style>
+    /* Style for toggle switch */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+    }
+
+    .switch input {
+      display: none;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 20px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+    }
+
+    input:checked+.slider {
+      background-color: #4CAF50;
+    }
+
+    input:checked+.slider:before {
+      transform: translateX(20px);
+    }
+  </style>
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+          <a href="./dashboard.html" class="text-nowrap logo-img mt-3 ms-5">
+            <img src="../assets\images\logo\logo.png" alt=" " width="100">
+            <!-- <img src="../assets/images/logos/dark-logo.svg" width="180" alt="" /> -->
+          </a>
+          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+            <i class="ti ti-x fs-8"></i>
+          </div>
+        </div>
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+          <ul id="sidebarnav">
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Home</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./dashboard.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span class="hide-menu">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Manage User</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./customer.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-user-check"></i>
+                </span>
+                <span class="hide-menu">Customer</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./driver.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-user-circle"></i>
+                </span>
+                <span class="hide-menu">Driver</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./transport.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-car"></i>
+                </span>
+                <span class="hide-menu">Transport Service</span>
+              </a>
+            </li>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Apps Setting</span>
+            </li>
+            
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./cityarea.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-map"></i>
+                </span>
+                <span class="hide-menu">City Area</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./cupondeals.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-discount"></i>
+                </span>
+                <span class="hide-menu">Cupon Deals</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+      <!--  Header Start -->
+      <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <ul class="navbar-nav">
+            <li class="nav-item d-block d-xl-none">
+              <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                <i class="ti ti-bell-ringing"></i>
+                <div class="notification bg-primary rounded-circle"></div>
+              </a>
+            </li>
+          </ul>
+          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+              <a href="/" target="_blank"
+                class="btn btn-primary">Change Langguage</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                  <div class="message-body">
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3">My Profile</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-mail fs-6"></i>
+                      <p class="mb-0 fs-3">My Account</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-list-check fs-6"></i>
+                      <p class="mb-0 fs-3">My Task</p>
+                    </a>
+                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--  Header End -->
+      <div class="container-fluid">
+        <div class="container-fluid">
+          <div class="row mt-2">
+              <h5 class="mt-2">Today Summary</h5>
+      
+              <!-- Card Pedicab -->
+              <div class="col-3">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5>Pedicab</h5>
+                          <div class="row">
+                              <div class="col-6">
+                                  <!-- <p style="font-size: 25px;" class="ms-2">Pedicab</p> -->
+                              </div>
+                              <div class="col-6">
+                                  <span class="ti ti-pedicab" style="font-size: 50px;"></span>
+                              </div>
+                          </div>
+                          <!-- Toggle On/Off -->
+                          <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" id="pedicabToggle">
+                              <label class="form-check-label" for="pedicabToggle">on/off</label>
+                          </div>
+                          <!-- Button to trigger modal -->
+                          <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#pedicabModal">Show Pedicab Chart</button>
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Card Carriage -->
+              <div class="col-3">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5>Carriage</h5>
+                          <div class="row">
+                              <div class="col-6">
+                                  <!-- <p style="font-size: 25px;" class="ms-2">Carriage</p> -->
+                              </div>
+                              <div class="col-6">
+                                  <span class="ti ti-carriage" style="font-size: 50px;"></span>
+                              </div>
+                          </div>
+                          <!-- Toggle On/Off -->
+                          <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" id="carriageToggle">
+                              <label class="form-check-label" for="carriageToggle">on/off</label>
+                          </div>
+                          <!-- Button to trigger modal -->
+                          <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#carriageModal">Show Carriage Chart</button>
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Card Decorated Car -->
+              <div class="col-3">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5>Decorated Car</h5>
+                          <div class="row">
+                              <div class="col-6">
+                                  <!-- <p style="font-size: 25px;" class="ms-2">Decorated Car</p> -->
+                              </div>
+                              <div class="col-6">
+                                  <span class="ti ti-decorated-car" style="font-size: 50px;"></span>
+                              </div>
+                          </div>
+                          <!-- Toggle On/Off -->
+                          <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" id="decoratedCarToggle">
+                              <label class="form-check-label" for="decoratedCarToggle">on/off</label>
+                          </div>
+                          <!-- Button to trigger modal -->
+                          <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#decoratedCarModal">Show Decorated Car Chart</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Modals for each chart -->
+          <!-- Pedicab Modal -->
+          <div class="modal fade" id="pedicabModal" tabindex="-1" aria-labelledby="pedicabModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="pedicabModalLabel">Pedicab Chart</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <div id="chartPedicab" style="height: 400px;"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Carriage Modal -->
+          <div class="modal fade" id="carriageModal" tabindex="-1" aria-labelledby="carriageModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="carriageModalLabel">Carriage Chart</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <div id="chartCarriage" style="height: 400px;"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Decorated Car Modal -->
+          <div class="modal fade" id="decoratedCarModal" tabindex="-1" aria-labelledby="decoratedCarModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="decoratedCarModalLabel">Decorated Car Chart</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <div id="chartDecoratedCar" style="height: 400px;"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Data for charts
+    const dataSeries = {
+        days: ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat'],
+        decoratedCar: [10, 40, 30, 50, 60],
+        pedicab: [15, 35, 25, 55, 45],
+        carriage: [20, 30, 40, 35, 50]
+    };
+
+    // Chart options
+    const chartOptions = (seriesData, title) => ({
+        chart: {
+            type: 'line',
+            height: 350
+        },
+        series: [{
+            name: title,
+            data: seriesData
+        }],
+        xaxis: {
+            categories: dataSeries.days
+        },
+        yaxis: {
+            title: {
+                text: 'Nilai'
+            }
+        },
+        title: {
+            text: title,
+            align: 'center'
+        }
+    });
+
+    // Render charts in modals
+    const renderChart = (elementId, data, title) => {
+        const chart = new ApexCharts(document.querySelector(elementId), chartOptions(data, title));
+        chart.render();
+    };
+
+    // Initialize charts when modals are opened
+    document.getElementById('pedicabModal').addEventListener('shown.bs.modal', function () {
+        renderChart('#chartPedicab', dataSeries.pedicab, 'Pedicab Chart');
+    });
+
+    document.getElementById('carriageModal').addEventListener('shown.bs.modal', function () {
+        renderChart('#chartCarriage', dataSeries.carriage, 'Carriage Chart');
+    });
+
+    document.getElementById('decoratedCarModal').addEventListener('shown.bs.modal', function () {
+        renderChart('#chartDecoratedCar', dataSeries.decoratedCar, 'Decorated Car Chart');
+    });
+
+    // Optional: Clear charts when modal is hidden (to avoid re-rendering issues)
+    document.getElementById('pedicabModal').addEventListener('hidden.bs.modal', function () {
+        document.querySelector('#chartPedicab').innerHTML = '';
+    });
+
+    document.getElementById('carriageModal').addEventListener('hidden.bs.modal', function () {
+        document.querySelector('#chartCarriage').innerHTML = '';
+    });
+
+    document.getElementById('decoratedCarModal').addEventListener('hidden.bs.modal', function () {
+        document.querySelector('#chartDecoratedCar').innerHTML = '';
+    });
+</script>
+
+</body>
+</html>

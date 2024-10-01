@@ -84,7 +84,7 @@
                             <span class="hide-menu">Home</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/html/dashboard.html" aria-expanded="false">
+                            <a class="sidebar-link" href="/template/html/dashboard.html" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-layout-dashboard"></i>
                                 </span>
@@ -96,7 +96,7 @@
                             <span class="hide-menu">Manage User</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/html/customer.html" aria-expanded="false">
+                            <a class="sidebar-link" href="/template/html/customer.html" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-user-check"></i>
                                 </span>
@@ -104,7 +104,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/html/driver.html" aria-expanded="false">
+                            <a class="sidebar-link" href="/template/html/driver.html" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-user-circle"></i>
                                 </span>
@@ -112,7 +112,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/html/transport.html" aria-expanded="false">
+                            <a class="sidebar-link" href="/template/html/transport.html" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-car"></i>
                                 </span>
@@ -124,7 +124,7 @@
                             <span class="hide-menu">Apps Setting</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/html/cityarea.html" aria-expanded="false">
+                            <a class="sidebar-link" href="/template/html/cityarea.html" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-map"></i>
                                 </span>
@@ -132,7 +132,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/html/cupondeals.html" aria-expanded="false">
+                            <a class="sidebar-link" href="/template/html/cupondeals.html" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-discount"></i>
                                 </span>
@@ -206,7 +206,7 @@
             <div class="container-fluid">
                 <div class="row mt-2">
                     <!-- col 1 -->
-                    <div class="col-3">
+                    <div class="col-12 col-sm-6 col-md-3">
                         <div class="card">
                             <div class="card-body">
                                 <h5>Total Coupon</h5>
@@ -225,7 +225,7 @@
                         </div>
                     </div>
                     <!-- col 2 -->
-                    <div class="col-3">
+                    <div class="col-12 col-sm-6 col-md-3">
                         <div class="card">
                             <div class="card-body">
                                 <h5>Active Coupon</h5>
@@ -244,7 +244,7 @@
                         </div>
                     </div>
                     <!-- col 3 -->
-                    <div class="col-3">
+                    <div class="col-12 col-sm-6 col-md-3">
                         <div class="card">
                             <div class="card-body">
                                 <h5>Puchase Coupon</h5>
@@ -263,7 +263,7 @@
                         </div>
                     </div>
                     <!-- col 4 -->
-                    <div class="col-3">
+                    <div class="col-12 col-sm-6 col-md-3">
                         <div class="card">
                             <div class="card-body">
                                 <h5>Total Category</h5>
@@ -286,85 +286,7 @@
         </div>
     </div>
 
-    <!-- modal -->
-    <!-- Modal Edit -->
-    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editModalLabel">Edit User</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="editForm">
-                        <div class="mb-3">
-                            <label for="editNama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="editNama" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="editEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="editEmail" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="editNoHp" class="form-label">No - HP</label>
-                            <input type="text" class="form-control" id="editNoHp" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="editStatus" class="form-label">Status</label>
-                            <select class="form-control" id="editStatus">
-                                <option value="active">Active</option>
-                                <option value="inactive">Inactive</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end of modal  -->
-
-    <!-- Modal Add User -->
-    <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addUserModalLabel">Add User</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="addUserForm">
-                        <div class="mb-3">
-                            <label for="addNama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="addNama" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="addEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="addEmail" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="addNoHp" class="form-label">No - HP</label>
-                            <input type="text" class="form-control" id="addNoHp" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="addStatus" class="form-label">Status</label>
-                            <select class="form-control" id="addStatus">
-                                <option value="active">Active</option>
-                                <option value="inactive">Inactive</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="saveNewUser">Add User</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

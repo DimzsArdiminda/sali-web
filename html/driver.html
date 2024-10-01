@@ -84,7 +84,7 @@
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/html/dashboard.html" aria-expanded="false">
+              <a class="sidebar-link" href="/template/html/dashboard.html" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -96,7 +96,7 @@
               <span class="hide-menu">Manage User</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/html/customer.html" aria-expanded="false">
+              <a class="sidebar-link" href="/template/html/customer.html" aria-expanded="false">
                 <span>
                   <i class="ti ti-user-check"></i>
                 </span>
@@ -104,7 +104,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/html/driver.html" aria-expanded="false">
+              <a class="sidebar-link" href="/template/html/driver.html" aria-expanded="false">
                 <span>
                   <i class="ti ti-user-circle"></i>
                 </span>
@@ -112,7 +112,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/html/transport.html" aria-expanded="false">
+              <a class="sidebar-link" href="/template/html/transport.html" aria-expanded="false">
                 <span>
                   <i class="ti ti-car"></i>
                 </span>
@@ -124,7 +124,7 @@
               <span class="hide-menu">Apps Setting</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/html/cityarea.html" aria-expanded="false">
+              <a class="sidebar-link" href="/template/html/cityarea.html" aria-expanded="false">
                 <span>
                   <i class="ti ti-map"></i>
                 </span>
@@ -132,7 +132,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/html/cupondeals.html" aria-expanded="false">
+              <a class="sidebar-link" href="/template/html/cupondeals.html" aria-expanded="false">
                 <span>
                   <i class="ti ti-discount"></i>
                 </span>
@@ -199,7 +199,7 @@
       <div class="container-fluid">
         <div class="row mt-2">
           <!-- col 1 -->
-          <div class="col-3">
+          <div class="col-12 col-sm-6 col-md-3">
             <div class="card">
               <div class="card-body">
                 <h5>Approved Driver</h5>
@@ -215,7 +215,7 @@
             </div>
           </div>
           <!-- col 2 -->
-          <div class="col-3">
+          <div class="col-12 col-sm-6 col-md-3">
             <div class="card">
               <div class="card-body">
                 <h6>Un-Approved Driver</h6>
@@ -231,7 +231,7 @@
             </div>
           </div>
           <!-- col 3 -->
-          <div class="col-3">
+          <div class="col-12 col-sm-6 col-md-3">
             <div class="card">
               <div class="card-body">
                 <h5>Blocked Driver</h5>
@@ -247,7 +247,7 @@
             </div>
           </div>
           <!-- col 4 -->
-          <div class="col-3">
+          <div class="col-12 col-sm-6 col-md-3">
             <div class="card">
               <div class="card-body">
                 <h5>Reject Driver</h5>
@@ -283,76 +283,78 @@
               </div>
             </div>
           </div>
-          <table id="myTable" class="display table-active">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Nama</th>
-                <th>Email</th>
-                <th>No - HP</th>
-                <th>Status</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Budi</td>
-                <td>budi@example.com</td>
-                <td>081234567890</td>
-                <td>
-                  <label class="switch">
-                    <input type="checkbox" checked>
-                    <span class="slider"></span>
-                  </label>
-                </td>
-                <td> <button class="btn btn-danger btn-sm">
-                    <i class="ti ti-trash"></i>
-                  </button>
-                  <button class="btn btn-primary btn-sm">
-                    <i class="ti ti-edit"></i>
-                  </button></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>agus</td>
-                <td>agus@example.com</td>
-                <td>081234567891</td>
-                <td>
-                  <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                  </label>
-                </td>
-                <td> <button class="btn btn-danger btn-sm">
-                    <i class="ti ti-trash"></i>
-                  </button>
-                  <button class="btn btn-primary btn-sm">
-                    <i class="ti ti-edit"></i>
-                  </button></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>speed</td>
-                <td>speed@example.com</td>
-                <td>081234567892</td>
-                <td>
-                  <label class="switch">
-                    <input type="checkbox" checked>
-                    <span class="slider"></span>
-                  </label>
-                </td>
-                <td>
-                  <button class="btn btn-danger btn-sm">
-                    <i class="ti ti-trash"></i>
-                  </button>
-                  <button class="btn btn-primary btn-sm">
-                    <i class="ti ti-edit"></i>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-responsive">
+            <table id="myTable" class="display table-active">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nama</th>
+                  <th>Email</th>
+                  <th>No - HP</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Budi</td>
+                  <td>budi@example.com</td>
+                  <td>081234567890</td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </td>
+                  <td> <button class="btn btn-danger btn-sm">
+                      <i class="ti ti-trash"></i>
+                    </button>
+                    <button class="btn btn-primary btn-sm">
+                      <i class="ti ti-edit"></i>
+                    </button></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>agus</td>
+                  <td>agus@example.com</td>
+                  <td>081234567891</td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider"></span>
+                    </label>
+                  </td>
+                  <td> <button class="btn btn-danger btn-sm">
+                      <i class="ti ti-trash"></i>
+                    </button>
+                    <button class="btn btn-primary btn-sm">
+                      <i class="ti ti-edit"></i>
+                    </button></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>speed</td>
+                  <td>speed@example.com</td>
+                  <td>081234567892</td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger btn-sm">
+                      <i class="ti ti-trash"></i>
+                    </button>
+                    <button class="btn btn-primary btn-sm">
+                      <i class="ti ti-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
